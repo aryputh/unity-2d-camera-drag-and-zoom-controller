@@ -24,6 +24,7 @@ public class CameraSystem2D : MonoBehaviour
     {
         HandleCameraMovementDragPan();
 
+        //Makes sure the current size is within the max and min sizes
         if (cam.orthographicSize < minCamSize)
         {
             cam.orthographicSize = minCamSize;
@@ -34,6 +35,7 @@ public class CameraSystem2D : MonoBehaviour
         }
     }
 
+    //Manages the camera drag input
     private void HandleCameraMovementDragPan()
     {
         Vector3 inputDir = new Vector3(0, 0, 0);
